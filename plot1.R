@@ -8,7 +8,7 @@ hpc <- subset(hpc, Date %in% c("1/2/2007","2/2/2007"))
 hpc <- transform(hpc, Global_active_power = as.numeric(as.character(Global_active_power)))
 
 # Display the histogram
-hist(hpc3$Global_active_power, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
+hist(hpc$Global_active_power, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
 
 # Save the chart to a PNG file
 dev.copy(device = png, filename = "plot1.png", width = 480, height = 480)
